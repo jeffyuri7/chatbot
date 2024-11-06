@@ -11,10 +11,7 @@ model = ChatGroq(model="llama3-8b-8192")
 parser = StrOutputParser()
 
 template_mensagem = ChatPromptTemplate(
-    [("system", "Traduza o texto para o idioma {idioma}"), ("user", "{texto}")]
+    [("system", "Você é um assistente de ajuda médica"), ("user", "{texto}")]
 )
 
 chain = template_mensagem | model | parser
-
-texto = chain.invoke({"idioma": "francês", "texto": "Eu sou bonito"})
-print(texto)
