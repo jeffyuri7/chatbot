@@ -38,6 +38,7 @@ def on_btn_click():
 st.session_state.setdefault("past", [])
 st.session_state.setdefault("generated", [])
 
+st.set_page_config(page_title="Chatbot - WAProject", page_icon="robot_face")
 st.title("Chatbot Interativo")
 st.subheader("Desafio WAProject - Python Aprendizado Contínuo")
 
