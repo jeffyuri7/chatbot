@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8501:8501"
+    depends_on:
+      - chroma-db
+    environment:
+      - CHROMA_URL=http://chroma-db:5000  # Conexão com o container do Chroma
+    volumes:
+      - .:/app
+
+  chroma-db:
+    build:
+      context: ./chroma-db
+    ports:
+      - "5000:5000"
+    volumes:
+      - chroma-data:/app/data  # Armazenar dados persistentes do Chroma
+
+volumes:
+  chroma-data:

@@ -11,6 +11,9 @@ langchain = "*"
 langgraph = "*"
 langchain-groq = "*"
 langserve = {extras = ["all"], version = "*"}
+chromadb = "*"
+langchain-community = "*"
+langchain-openai = "*"
 
 [dev-packages]
 

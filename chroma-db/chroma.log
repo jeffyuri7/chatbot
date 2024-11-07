@@ -1,0 +1,84 @@
+[32mINFO[0m:     [07-11-2024 15:31:55] Set chroma_server_nofile to 65535
+[32mINFO[0m:     [07-11-2024 15:31:55] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [07-11-2024 15:31:55] Starting component System
+[36mDEBUG[0m:    [07-11-2024 15:31:55] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [07-11-2024 15:31:55] Starting component SqliteDB
+[36mDEBUG[0m:    [07-11-2024 15:31:55] Starting component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [07-11-2024 15:31:55] Starting component Posthog
+[36mDEBUG[0m:    [07-11-2024 15:31:55] Starting component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [07-11-2024 15:31:55] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [07-11-2024 15:31:55] Starting component LocalExecutor
+[36mDEBUG[0m:    [07-11-2024 15:31:55] Starting component SegmentAPI
+[32mINFO[0m:     [07-11-2024 15:31:56] Started server process [[36m305437[0m]
+[32mINFO[0m:     [07-11-2024 15:31:56] Waiting for application startup.
+[32mINFO[0m:     [07-11-2024 15:31:56] Application startup complete.
+[32mINFO[0m:     [07-11-2024 15:31:56] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [07-11-2024 15:32:48] ::1:38626 - "GET /api/v2/auth/identity HTTP/1.1" 200
+[32mINFO[0m:     [07-11-2024 15:32:48] ::1:38636 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-11-2024 15:32:48] ::1:38636 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-11-2024 15:33:26] ::1:44898 - "GET /api/v2/auth/identity HTTP/1.1" 200
+[32mINFO[0m:     [07-11-2024 15:33:26] ::1:44902 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-11-2024 15:33:26] ::1:44902 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-11-2024 15:33:54] ::1:33500 - "GET /api/v2/auth/identity HTTP/1.1" 200
+[32mINFO[0m:     [07-11-2024 15:33:54] ::1:33514 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-11-2024 15:33:54] ::1:33514 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [07-11-2024 15:33:54] Collection tutorial already exists, returning existing collection.
+[32mINFO[0m:     [07-11-2024 15:33:54] ::1:33500 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections HTTP/1.1" 200
+[36mDEBUG[0m:    [07-11-2024 15:33:55] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [07-11-2024 15:33:55] ::1:33500 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/41001b16-8d84-42ab-876c-1b5b25a22300/query HTTP/1.1" 200
+[32mINFO[0m:     [07-11-2024 15:34:26] ::1:36184 - "GET /api/v2/auth/identity HTTP/1.1" 200
+[32mINFO[0m:     [07-11-2024 15:34:26] ::1:36192 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-11-2024 15:34:26] ::1:36192 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [07-11-2024 15:34:26] Collection tutorial already exists, returning existing collection.
+[32mINFO[0m:     [07-11-2024 15:34:26] ::1:36184 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections HTTP/1.1" 200
+[32mINFO[0m:     [07-11-2024 15:34:27] ::1:36184 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/41001b16-8d84-42ab-876c-1b5b25a22300/query HTTP/1.1" 200
+[32mINFO[0m:     [07-11-2024 15:35:06] Shutting down
+[32mINFO[0m:     [07-11-2024 15:35:06] Waiting for application shutdown.
+[36mDEBUG[0m:    [07-11-2024 15:35:06] Stopping component System
+[36mDEBUG[0m:    [07-11-2024 15:35:06] Stopping component SegmentAPI
+[36mDEBUG[0m:    [07-11-2024 15:35:06] Stopping component LocalExecutor
+[36mDEBUG[0m:    [07-11-2024 15:35:06] Stopping component PersistentLocalHnswSegment
+[36mDEBUG[0m:    [07-11-2024 15:35:06] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [07-11-2024 15:35:06] Stopping component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [07-11-2024 15:35:06] Stopping component Posthog
+[36mDEBUG[0m:    [07-11-2024 15:35:06] Stopping component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [07-11-2024 15:35:06] Stopping component SqliteDB
+[36mDEBUG[0m:    [07-11-2024 15:35:06] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [07-11-2024 15:35:06] Application shutdown complete.
+[32mINFO[0m:     [07-11-2024 15:35:06] Finished server process [[36m305437[0m]
+[32mINFO[0m:     [07-11-2024 15:35:49] Set chroma_server_nofile to 65535
+[32mINFO[0m:     [07-11-2024 15:35:49] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [07-11-2024 15:35:49] Starting component System
+[36mDEBUG[0m:    [07-11-2024 15:35:49] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [07-11-2024 15:35:49] Starting component SqliteDB
+[36mDEBUG[0m:    [07-11-2024 15:35:49] Starting component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [07-11-2024 15:35:49] Starting component Posthog
+[36mDEBUG[0m:    [07-11-2024 15:35:49] Starting component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [07-11-2024 15:35:49] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [07-11-2024 15:35:49] Starting component LocalExecutor
+[36mDEBUG[0m:    [07-11-2024 15:35:49] Starting component SegmentAPI
+[32mINFO[0m:     [07-11-2024 15:35:50] Started server process [[36m309367[0m]
+[32mINFO[0m:     [07-11-2024 15:35:50] Waiting for application startup.
+[32mINFO[0m:     [07-11-2024 15:35:50] Application startup complete.
+[32mINFO[0m:     [07-11-2024 15:35:50] Uvicorn running on [1mhttp://localhost:5000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [07-11-2024 15:36:10] ::1:56406 - "GET /api/v2/auth/identity HTTP/1.1" 200
+[32mINFO[0m:     [07-11-2024 15:36:10] ::1:56420 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-11-2024 15:36:10] ::1:56420 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [07-11-2024 15:36:10] Collection tutorial already exists, returning existing collection.
+[32mINFO[0m:     [07-11-2024 15:36:10] ::1:56406 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections HTTP/1.1" 200
+[36mDEBUG[0m:    [07-11-2024 15:36:11] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [07-11-2024 15:36:11] ::1:56406 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/41001b16-8d84-42ab-876c-1b5b25a22300/query HTTP/1.1" 200
+[32mINFO[0m:     [07-11-2024 15:37:39] Shutting down
+[32mINFO[0m:     [07-11-2024 15:37:39] Waiting for application shutdown.
+[36mDEBUG[0m:    [07-11-2024 15:37:39] Stopping component System
+[36mDEBUG[0m:    [07-11-2024 15:37:39] Stopping component SegmentAPI
+[36mDEBUG[0m:    [07-11-2024 15:37:39] Stopping component LocalExecutor
+[36mDEBUG[0m:    [07-11-2024 15:37:39] Stopping component PersistentLocalHnswSegment
+[36mDEBUG[0m:    [07-11-2024 15:37:39] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [07-11-2024 15:37:39] Stopping component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [07-11-2024 15:37:39] Stopping component Posthog
+[36mDEBUG[0m:    [07-11-2024 15:37:39] Stopping component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [07-11-2024 15:37:39] Stopping component SqliteDB
+[36mDEBUG[0m:    [07-11-2024 15:37:39] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [07-11-2024 15:37:39] Application shutdown complete.
+[32mINFO[0m:     [07-11-2024 15:37:39] Finished server process [[36m309367[0m]
