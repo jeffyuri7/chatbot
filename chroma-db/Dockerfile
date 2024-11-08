@@ -16,5 +16,5 @@ COPY . .
 # Expor a porta para o serviço
 EXPOSE 5000
 
-# Comando para iniciar o Chroma
-CMD ["python", "chroma_server.py"]
+# Comando para iniciar o Chroma com a porta e o caminho especificados
+CMD ["chroma", "run", "--port", "5000", "--path", "/app/db"]
