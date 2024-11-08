@@ -6,7 +6,6 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 import chromadb
-from langchain.embeddings.openai import OpenAIEmbeddings
 
 # Carregar variáveis de ambiente
 load_dotenv()
@@ -24,11 +23,9 @@ template_mensagem = ChatPromptTemplate(
 chain = template_mensagem | model | parser
 
 # Conectar ao Chroma (banco de dados vetorial)
-client = chromadb.Client(host=os.getenv("CHROMA_URL", "http://chroma-db:5000"))
-collection = client.create_collection("user_data")
-
-# Inicializar a função de embedding usando OpenAI
-embedding = OpenAIEmbeddings()
+# client = chromadb.HttpClient(host="localhost", port=5000)
+# chroma_client.heartbeat()
+# collection = client.create_collection("user_data")
 
 
 # Função para armazenar dados no Chroma (vetorizar o texto)
@@ -77,9 +74,9 @@ def process_user_input(texto: str):
     return response
 
 
-# Exemplo de interação com o chatbot
-if __name__ == "__main__":
-    user_input = input("Digite sua mensagem para o chatbot: ")
+# # Exemplo de interação com o chatbot
+# if __name__ == "__main__":
+#     user_input = input("Digite sua mensagem para o chatbot: ")
 
-    bot_response = process_user_input(user_input)
-    print(f"Resposta do Bot: {bot_response}")
+#     bot_response = process_user_input(user_input)
+#     print(f"Resposta do Bot: {bot_response}")
