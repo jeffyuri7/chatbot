@@ -1,15 +1,12 @@
 services:
   chroma-db:
-    build:
-      context: ./chroma-db
+    image: chromadb/chroma
     ports:
-      - "5000:5000"
+      - "8000:8000"
+    networks:
+      - app-network
     volumes:
-      - chroma-data:/app/data
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:5000"]
-      interval: 10s
-      retries: 5
+      - chroma-data:/data
 
   backend:
     build:
@@ -17,12 +14,16 @@ services:
     ports:
       - "8501:8501"
     depends_on:
-      chroma-db:
-        condition: service_healthy
+      - chroma-db
     environment:
-      - CHROMA_URL=http://chroma-db:5000
-    volumes:
-      - .:/app
+      - CHROMA_HOST=chroma-db
+      - CHROMA_PORT=8000
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
 
 volumes:
   chroma-data:

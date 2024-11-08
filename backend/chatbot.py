@@ -23,8 +23,8 @@ template_mensagem = ChatPromptTemplate(
 chain = template_mensagem | model | parser
 
 # Conectar ao Chroma (banco de dados vetorial)
-# client = chromadb.HttpClient(host="localhost", port=5000)
-# chroma_client.heartbeat()
+client = chromadb.HttpClient(host="chroma-db", port=8000)
+client.heartbeat()
 # collection = client.create_collection("user_data")
 
 

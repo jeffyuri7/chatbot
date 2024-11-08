@@ -4,7 +4,7 @@ from streamlit_chat import message
 from streamlit.components.v1 import html
 from langserve import RemoteRunnable
 
-remote_chain = RemoteRunnable("http://localhost:8000/chatbot")
+remote_chain = RemoteRunnable("http://localhost:8502/chatbot")
 
 
 # Função para gerar resposta do bot usando OpenAI GPT
